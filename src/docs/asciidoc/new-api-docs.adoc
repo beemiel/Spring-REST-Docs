@@ -1,16 +1,6 @@
-//= NEW API Docs
-//Vojtech Ruzicka<myfakemail@gmail.com>
-//1.0.0, 09/06/2020
-//:toc: left
-//:sectnums:
-= My REST API
-v{version}, {writer}, {date}
-:doctype: book
-:icons: font
-:source-highlighter: highlightjs
-:highlightjs-theme: github
+= NEW API Docs
+1.0.0, 09/06/2020
 :toc: left
-:toclevels: 3
 :sectlinks:
 :sectnums:
 
@@ -36,6 +26,12 @@ include::{snippets}/member-controller-test/test-member/path-parameters.adoc[]
 include::{snippets}/member-controller-test/test-member/response-fields.adoc[]
 
 
-== 테스트2
+== 멤버 저장
+
+HTTP Request
+include::{snippets}/member-controller-test/save-member/http-request.adoc[]
+
+HTTP Response
+include::{snippets}/member-controller-test/save-member/http-response.adoc[]
 
 == 테스트3
