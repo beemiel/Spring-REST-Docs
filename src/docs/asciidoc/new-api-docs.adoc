@@ -1,0 +1,27 @@
+= new API Docs
+Lynn<qnswwrn@gmail.com>
+1.0.0, 09/06/2020
+:toc: left
+:sectnums:
+
+== GET member list 모든 회원 가져오기
+
+=== HTTP Request
+include::{snippets}/member-controller-test/test-list/http-request.adoc[]
+
+==== 이러면?
+==== 또 이러면?
+
+=== HTTP Response
+include::{snippets}/member-controller-test/test-member/http-response.adoc[]
+
+=== Path-parameters
+include::{snippets}/member-controller-test/test-member/path-parameters.adoc[]
+
+=== Response Fields
+include::{snippets}/member-controller-test/test-member/response-fields.adoc[]
+
+
+== 테스트2
+
+== 테스트3
