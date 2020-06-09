@@ -17,6 +17,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.hamcrest.core.StringContains.containsString;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
@@ -28,6 +29,7 @@ import static org.springframework.restdocs.request.RequestDocumentation.paramete
 import static org.springframework.restdocs.request.RequestDocumentation.pathParameters;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(MemberController.class)
@@ -108,6 +110,7 @@ class MemberControllerTest {
                     .content(objectMapper.writeValueAsString(member2))
                     .contentType(MediaType.APPLICATION_JSON)) //이거 해야지 member가 리퀘스트 파람이 아니라 바디에 제이슨타입으로 들어가는듯?
                 .andExpect(status().isOk())
+                .andExpect(content().json("{\"id\": 4, \"age\": 99}"))
                 .andDo(document(
                        "{class-name}/{method-name}",
                         preprocessRequest(prettyPrint()),
@@ -123,6 +126,11 @@ class MemberControllerTest {
                                 fieldWithPath("age").description("request/post")
                         )
                 ));
+    }
+
+    @Test
+    public void updateMember() {
+        when(memberController.update(any())).thenReturn(member);
     }
 
 }
