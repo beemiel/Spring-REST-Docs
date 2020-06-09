@@ -30,9 +30,23 @@ include::{snippets}/member-controller-test/test-member/response-fields.adoc[]
 == 멤버 저장
 
 HTTP Request
-include::{snippets}/member-controller-test/save-member/http-request.adoc[]
+include::../../../build/generated-snippets/member-controller-test/save-member/http-request.adoc[]
 
 HTTP Response
-include::{snippets}/member-controller-test/save-member/http-response.adoc[]
+include::../../../build/generated-snippets/member-controller-test/save-member/http-response.adoc[]
+
+response-fields
+include::../../../build/generated-snippets/member-controller-test/save-member/response-fields.adoc[]
+
+request-fields
+include::../../../build/generated-snippets/member-controller-test/save-member/request-fields.adoc[]
+
+response-body
+include::../../../build/generated-snippets/member-controller-test/save-member/response-body.adoc[]
+
+request-body
+include::../../../build/generated-snippets/member-controller-test/save-member/request-body.adoc[]
+
+
 
 == 테스트3

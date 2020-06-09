@@ -142,4 +142,17 @@ class MemberControllerTest {
                 ));
     }
 
+    @Test
+    public void deleteMember() throws Exception {
+        when(memberController.delete(any())).thenReturn(member);
+
+        mockMvc.perform(delete("/test/{id}", member.getId()))
+                .andExpect(status().isOk())
+                .andDo(document(
+                        "{class-name}/{method-name}",
+                        preprocessRequest(prettyPrint()),
+                        preprocessResponse(prettyPrint())
+                ));
+    }
+
 }
