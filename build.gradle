@@ -1,3 +1,5 @@
+import java.text.SimpleDateFormat
+
 plugins {
 	id 'org.springframework.boot' version '2.3.0.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
@@ -52,4 +54,9 @@ test {
 asciidoctor {
 	inputs.dir snippetsDir
 	dependsOn test
+
+
+	attributes "version": version,
+			"date": new SimpleDateFormat("yyyy-MM-dd").format(new Date()),
+			"writer": 'lynn [lynn256@gmail.com]'
 }

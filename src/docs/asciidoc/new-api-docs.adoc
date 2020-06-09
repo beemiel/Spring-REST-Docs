@@ -1,8 +1,22 @@
-= new API Docs
-Lynn<qnswwrn@gmail.com>
-1.0.0, 09/06/2020
+//= NEW API Docs
+//Vojtech Ruzicka<myfakemail@gmail.com>
+//1.0.0, 09/06/2020
+//:toc: left
+//:sectnums:
+= My REST API
+v{version}, {writer}, {date}
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:highlightjs-theme: github
 :toc: left
+:toclevels: 3
+:sectlinks:
 :sectnums:
+
+[introduction]
+== Introduction
+... some warm introductory words... .
 
 == GET member list 모든 회원 가져오기
 
