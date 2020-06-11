@@ -73,7 +73,13 @@ class MemberControllerTest {
                                 .host("aws-test.com")
                                 .removePort(),prettyPrint()),
                         //modifyUris를 사용하면 request 및 response에 있는 URI를 변경할 수 있다.
-                        preprocessResponse(prettyPrint())
+                        preprocessResponse(prettyPrint()),
+                        responseFields(
+                                //reponse가 배열인 경우에는 여기 필드에도 배열 표시를 해줘야함
+                                fieldWithPath("[].id").description("회원의 id").type(Long.class),
+                                fieldWithPath("[].name").description("Member's name"),
+                                fieldWithPath("[].age").description("Member's age")
+                        )
                 ));
     }
 
